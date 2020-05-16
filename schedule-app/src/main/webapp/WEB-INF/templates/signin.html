@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="google-signin-client_id" content="714165401972-ajs7l4s80aelc8ep1nfq1bv68eh3d03a.apps.googleusercontent.com">
+    <link rel="shortcut icon" type="image/png" th:href="@{/resources/img/favicon.ico}"/>
+    <link rel="stylesheet" th:href="@{/resources/css/style.css}">
+
+    <title>Sign in</title>
+</head>
+<body>
+     <div class="header">
+            <div class="logo"><a th:href="@{/home}"><img th:src="@{/resources/img/logo.png}" alt="Logo"></a></div>
+            <ul class="navbar">
+                <li><a th:href="@{/home}">Home</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a th:href="@{/register}">Register</a></li>
+                <li><a th:href="@{/contacts}">Contact</a></li>
+            </ul>
+        </div>
+    
+      <div class="login-card">
+        <h1>Sign in</h1><br>
+        <form th:action="@{/login}" th:object="${login}" method="post">
+          <input type="text" name="user" minlength="4" th:field="*{userName}" placeholder="Login" required>
+          <input type="password" name="pass" th:field="*{password}" placeholder="Password" required>
+          <input type="submit" name="login" class="login login-submit" value="LOGIN">
+        </form>
+
+        <div class="login-help">
+          <span>Do not have an account?</span> | <a th:href="@{/register}">Register</a>
+        </div>
+          <div class="btn white darken-4 col s10 m4">
+              <a href="http://localhost:8082/oauth2/user" style="text-transform:none">
+                  <div class="left" style="margin-left: 60px; margin-top: 10px;">
+                      <img width="20px" alt="Google &quot;G&quot; Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png"/>
+                      Login with Google
+                  </div>
+              </a>
+          </div>
+      </div>
+
+    </div>
+    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+</body>
+</html>
