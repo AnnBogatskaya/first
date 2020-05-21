@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/png" th:href="@{/resources/img/favicon.ico}"/>
+
+    <link rel="stylesheet" th:href="@{css/style.css}">
+
+    <title>Notifier</title>
+</head>
+<body>
+<div class="header">
+    <div class="logo"><a th:href="@{/home}"><img th:src="@{/resources/img/logo.png}" alt="Logo"></a></div>
+    <ul class="navbar">
+        <li><a th:href="@{/home}">Home</a></li>
+        <li><a th:href="@{/news}">Events</a></li>
+        <li><a th:href="@{/register}">Register</a></li>
+        <li><a th:href="@{/contacts}">Contact</a></li>
+        <li class="btn-login"><a th:href="@{/login}">Sign in</a></li>
+    </ul>
+</div>
+<div class="news" style="margin-top: 50px;">
+    <input type="button" onclick="printDiv('printableArea')" value="Print!" />
+    <div id="printableArea">
+        <h2 style="color: #8d2d2d;"><b>MEDICAL TOURISM: ISRAEL RANKS #1 IN BOTH FACILITY AND SERVICE FACTORS AMONG MEDICAL TOURISTS (IHRC REPORT 2016)</b></h2>
+        <p>Due to the increasing number of patients seeking international care,</p>
+        <p>medical tourism is steadily becoming ever more popular.</p>
+        <p>>However, despite its growing demand, little data can be found regarding the varying success rates of participating countries.</p>
+        <p>The advent of the Medical Tourism Index (MTI) seeks to remedy this issue. Due to the development of an exhaustive eight-step procedure,</p>
+        <p>the MTI can now assess the attractiveness of participating countries as medical tourist destinations</p>
+
+        <h2 style="color: #8d2d2d;"><b>NOBEL PRIZE AWARDED TO HEAD OF RAMBAM'S SCIENTIFIC RESEARCH INSTITUTE</b></h2>
+        <p>The cutting-edge scientific research institute Rappaport,</p>
+        <p>whose employees are leading experts at the Rambam Medical Center,</p>
+        <p>continues to improve in the field of advanced scientific discoveries and their application to clinical practice.</p>
+        <p>The Institute is an independent facility conducting research in the field of medicine, </p>
+        <p>based on the work of medical faculty at the Haifa technological university, </p>
+        <p>Technion. It has become world-famous due to its hundreds of scientific research papers </p>
+        <p>published annually in leading international medical publications.</p>
+    </div>
+
+</div>
+</body>
+</html>
+<script>
+    function printDiv(divName) {
+        var printContents = document.getElementById(divName).innerHTML;
+        var originalContents = document.body.innerHTML;
+
+        document.body.innerHTML = printContents;
+
+        window.print();
+
+        document.body.innerHTML = originalContents;
+    }
+</script>

@@ -29,6 +29,9 @@ public class Schedule extends SuperEntity{
     @Column(name = "timeTo")
     private LocalTime timeTo;
 
+    @Column(name = "complaint")
+    private String complaint;
+
     @Column(name = "isavailable")
     private boolean isAvailable = true;
 

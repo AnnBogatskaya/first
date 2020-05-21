@@ -15,6 +15,8 @@ public class ScheduleDTO {
 
     private String timeTo;
 
+    private String complaint;
+
     private boolean isAvailable;
 
 

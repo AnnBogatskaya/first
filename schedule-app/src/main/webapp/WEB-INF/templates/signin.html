@@ -15,7 +15,7 @@
             <div class="logo"><a th:href="@{/home}"><img th:src="@{/resources/img/logo.png}" alt="Logo"></a></div>
             <ul class="navbar">
                 <li><a th:href="@{/home}">Home</a></li>
-                <li><a href="#">Events</a></li>
+                <li><a th:href="@{/news}">Events</a></li>
                 <li><a th:href="@{/register}">Register</a></li>
                 <li><a th:href="@{/contacts}">Contact</a></li>
             </ul>
@@ -32,14 +32,14 @@
         <div class="login-help">
           <span>Do not have an account?</span> | <a th:href="@{/register}">Register</a>
         </div>
-          <div class="btn white darken-4 col s10 m4">
-              <a href="http://localhost:8082/oauth2/user" style="text-transform:none">
-                  <div class="left" style="margin-left: 60px; margin-top: 10px;">
-                      <img width="20px" alt="Google &quot;G&quot; Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png"/>
-                      Login with Google
-                  </div>
-              </a>
-          </div>
+<!--          <div class="btn white darken-4 col s10 m4">-->
+<!--              <a href="http://localhost:8082/oauth2/user" style="text-transform:none">-->
+<!--                  <div class="left" style="margin-left: 60px; margin-top: 10px;">-->
+<!--                      <img width="20px" alt="Google &quot;G&quot; Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png"/>-->
+<!--                      Login with Google-->
+<!--                  </div>-->
+<!--              </a>-->
+<!--          </div>-->
       </div>
 
     </div>

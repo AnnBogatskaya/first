@@ -14,7 +14,7 @@
     <div class="header">
         <div class="logo"><a th:href="@{/home}"><img th:src="@{/resources/img/logo.png}" alt="Logo"></a></div>
             <ul class="navbar">
-                <li><a href="#">Events</a></li>
+                <li><a th:href="@{/news}">Events</a></li>
                 <li><a th:href="@{/contacts}">Contact</a></li>
             </ul>
     </div>
@@ -25,12 +25,18 @@
                 <th>Date</th>
                 <th>TimeFrom</th>
                 <th>TimeTo</th>
+                <th>Complaint</th>
             </tr>
             <tr th:each="schedule : ${schedules}">
             <form th:action="@{/user/appointment}" method="POST">
                     <td><input type="text" name="date" th:value="${schedule.date}"></td>
                     <td><input type="text" name="timeFrom" th:value="${schedule.timeFrom}" readonly></td>
                     <td><input type="text" name="timeTo" th:value="${schedule.timeTo}" readonly></td>
+                    <td><select id="complaint" name="complaint" th:value="${schedule.complaint}">
+                            <option value="Consultation">Consultation</option>
+                            <option value="Appointment">Appointment</option>
+                        </select>
+                    </td>
                     <td><input type="submit" name="submit-record" value="Record"></td>
             </form>
 

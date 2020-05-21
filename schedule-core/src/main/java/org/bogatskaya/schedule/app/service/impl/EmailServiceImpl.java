@@ -33,7 +33,7 @@ public class EmailServiceImpl implements EmailService {
 
 
         helper.setText(builder.toString(), true);
-        helper.setFrom("barleysugar96@gmail.com");
+        helper.setFrom("ann.bogatskaya@gmail.com");
         mailSender.send(mimeMessage);
     }
 }

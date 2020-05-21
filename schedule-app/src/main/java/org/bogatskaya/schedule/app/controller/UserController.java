@@ -74,7 +74,7 @@ public class UserController extends BaseController{
 
         RecordDTO recordDTO = new RecordDTO();
 
-        recordDTO.setComplaint("Consultation");
+        recordDTO.setComplaint(request.getParameter("complaint"));
         recordDTO.setFullname((String)request.getSession().getAttribute("fullname"));
         recordDTO.setTime(request.getParameter("timeFrom"));
         recordDTO.setDate(request.getParameter("date"));

@@ -17,6 +17,11 @@ public class FrontController extends BaseController{
         return "contact";
     }
 
+    @RequestMapping(value = "/news", method = RequestMethod.GET)
+    public String news(){
+        return "news";
+    }
+
     @RequestMapping(value = "/deny", method = RequestMethod.GET)
     public String deny(){
         return "deny";

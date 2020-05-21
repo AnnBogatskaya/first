@@ -46,7 +46,7 @@ public class AdminController extends BaseController{
 
     @RequestMapping(value = "/admin/records",method = RequestMethod.GET)
     public String showRecords(Model model){
-        model.addAttribute("records",recordService.findAll());
+        model.addAttribute("records", recordService.findAll());
 
         return "admin/records";
     }

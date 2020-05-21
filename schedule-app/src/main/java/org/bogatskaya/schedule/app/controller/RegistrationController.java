@@ -55,7 +55,7 @@ public class RegistrationController extends BaseController{
         Confirmation confirmation = new Confirmation(userDTO.getLogin(), token);
 
         userDTO.setPassword(encodedPass);
-        userDTO.setIsConfirmed(false);
+        userDTO.setIsConfirmed(true);
 
         model.addAttribute(userDTO);
 
@@ -68,10 +68,10 @@ public class RegistrationController extends BaseController{
 
         userService.saveUser(user);
 
-        confirmationService.save(confirmation);
+//        confirmationService.save(confirmation);
+//
+//        emailService.sendConfirmationMessage(userDTO.getEmail(), SUBJECT, token);
 
-        emailService.sendConfirmationMessage(userDTO.getEmail(), SUBJECT, token);
-
-        return "redirect:/confirmationPage";
+        return "reg_success";
     }
 }

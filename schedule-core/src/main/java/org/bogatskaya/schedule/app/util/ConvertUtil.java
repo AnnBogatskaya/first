@@ -28,7 +28,7 @@ public class ConvertUtil {
         schedule.setDate(LocalDate.parse(scheduleDTO.getDate()));
         schedule.setTimeFrom(LocalTime.parse(scheduleDTO.getTimeFrom()));
         schedule.setTimeTo(LocalTime.parse(scheduleDTO.getTimeTo()));
-
+        schedule.setComplaint(scheduleDTO.getComplaint());
         return schedule;
     }
 
@@ -52,7 +52,7 @@ public class ConvertUtil {
         scheduleDTO.setDate(schedule.getDate().toString());
         scheduleDTO.setTimeFrom(schedule.getTimeFrom().toString());
         scheduleDTO.setTimeTo(schedule.getTimeTo().toString());
-
+        scheduleDTO.setComplaint(schedule.getComplaint());
         return scheduleDTO;
     }
 }

@@ -13,7 +13,7 @@
         <div class="header">
             <div class="logo"><a th:href="@{/home}"><img th:src="@{/resources/img/logo.png}" alt="Logo"></a></div>
                 <ul class="navbar">
-                    <li><a href="#">Events</a></li>
+                    <li><a th:href="@{/news}">Events</a></li>
                     <li><a th:href="@{/contacts}">Contact</a></li>
                     <li class="auth_user"><a href="#" th:text="${fullname}"></a></li>
                 </ul>
@@ -22,7 +22,7 @@
         <!-- <div class="greeting"><h1 th:text="Welcome + ' ' + ${fullname}"></h1></div> -->
 
         <ul class="user-actions">
-            <li><a href="#">Create Profile</a></li>
+<!--            <li><a href="#">Create Profile</a></li>-->
             <li><a th:href="@{/user/appointment}">Appointment</a></li>
             <li><a th:href="@{/user/records}">Show Records</a></li>
             <li><a th:href="@{/logout}">Log Out</a></li>

@@ -15,12 +15,36 @@
             <div class="logo"><a th:href="@{/home}"><img th:src="@{/resources/img/logo.png}" alt="Logo"></a></div>
             <ul class="navbar">
                 <li><a th:href="@{/home}">Home</a></li>
-                <li><a href="#">Events</a></li>
+                <li><a th:href="@{/news}">Events</a></li>
                 <li><a th:href="@{/register}">Register</a></li>
                 <li><a th:href="@{/contacts}">Contact</a></li>
                 <li class="btn-login"><a th:href="@{/login}">Sign in</a></li>
             </ul>
         </div>
+        <div class="home_content" style="margin-top: 50px;">
+            <input type="button" onclick="printDiv('printableArea')" value="Print!" />
+            <div id="printableArea">
+                <h2 style="color: #8d2d2d;"><b>ABOUT RAMBAM HOSPITAL IN ISRAEL</b></h2>
+                <p>Rambam Hospital, founded in 1938, is the largest multidisciplinary treatment and diagnostic center in the northern region of Israel.</p>
+                <p>The medical center is named in honor of Rabbi Moshe ben Maimon, an outstanding Jewish philosopher, doctor, and scholar of the Middle Ages.</p>
+                <p>Rambam Medical Center is a state medical institution housing 36 hospitalization departments, 45 medical and diagnostic units, 10 institutes, and 6 laboratories.</p>
+                <p>The Rambam Medical Center employs a total of 4,000 employees, 715 doctors, and 1,407 nurses.</p>
+                <p>About 75,000 patients undergo inpatient treatment annually, and more than 500,000 patients are on outpatient supervision by specialists from various institutions and clinics.</p>
+                <p>The Ruth Rappaport multidisciplinary children's medical center at Rambam Hospital provides medical services in all fields of pediatric medicine.</p>
+            </div>
+        </div>
 
     </body>
 </html>
+<script>
+    function printDiv(divName) {
+        var printContents = document.getElementById(divName).innerHTML;
+        var originalContents = document.body.innerHTML;
+
+        document.body.innerHTML = printContents;
+
+        window.print();
+
+        document.body.innerHTML = originalContents;
+    }
+</script>
